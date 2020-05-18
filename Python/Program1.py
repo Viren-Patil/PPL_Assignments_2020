@@ -1,17 +1,30 @@
+b1 = {"grass", "goat", "tiger"}
+b2 = set()
+case1 = {"grass", "goat"}
+case2 = {"tiger", "goat"}
+b = 1
+while len(b1) != 0:
+    if b == 1:
+        if len(b1) == 3:
+            obj = b1.pop()
+            
+            if b1 != case1 and b1 != case2:
+                print(f"Farmer takes {obj} from bank1 to bank2")
+                b2.add(obj)
+                b = 2
+            else:
+                b1.add(obj)
+        else:
+            obj = b1.pop()
+            print(f"Farmer takes {obj} from bank1 to bank2")
+            b2.add(obj)
+            b = 2
+    else:
+        if b2 == case1 or b2 == case2:
+            obj = b2.pop()
+            print(f"Farmer takes {obj} from bank2 to bank1")
+            b1.add(obj)
+        else:
+            print("Farmer comes from bank2 to bank1")
 
-fd = open("/etc/hosts", 'a')
-l = {'coep':'www.coep.org.in', 'youtube':'www.youtube.com', 'facebook':'www.facebook.com', 'google':'www.google.com', 'linkedin':'www.linkedin.com'}
-
-s = str(input("Enter the name of the website to be blocked(URL not necessary): "))
-flag = 0
-for i in l:
-	if i.find(s) != -1 or l[i].find(s) != -1:
-		fd.write("127.0.0.1" + "	" + l[i] + "\n")
-		print ("Blocked " + l[i])
-		flag = 1
-
-if flag == 0:
-	print ("Couldn't block the website!")
-	
-fd.close()
-
+        b = 1
