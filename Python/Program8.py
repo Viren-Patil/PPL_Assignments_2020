@@ -1,44 +1,44 @@
+'''Computers usually solve square systems of linear equations using the LU decomposition. Write a program to compute LU decomposition.'''
 import sys
 
-def main():
-	 size = int(input("Enter the size of the matrix: "))
-	 i = 0
-	 j = 0
-	 A = []
-	 while i < size:
-	 	l = []
-	 	while j < size:
-	 		print "Entry ", i, j
-	 		l.append(int(input()))
-	 		j += 1
-	 	A.append(l)
-	 	i += 1
-	 	j = 0
-	 	
-	 i = 0
-	 j = 0
-	 k = 0
-	 L = []
-	 U = []
-	 while i < size:
-	 	l = []
-	 	while j < size:
-	 		l.append(0)
-	 		j += 1
-	 	L.append(l)
-	 	U.append(l)
-	 	i += 1
-	 	j = 0
-	 print L
-	 print U
-	 	
-	 while i < size:
-	 	while k < size:
-	 		s = 0
-	 		while j <= i:
-	 			s += L[i][j] * U[j][k]
-	 
+def lu(a, n) :
+	l = [[0 for x in range(n)] for y in range(n)]
+	u = [[0 for x in range(n)] for y in range(n)] 
+	for i in range(n):
+		for k in range(i, n):
+			sum_l = 0
+			for j in range(i):
+				sum_l += (l[i][j] * u[j][k])
+			u[i][k] = a[i][k] - sum_l
 
-
-if __name__ == '__main__':
-	main()
+		for k in range(i, n):
+			if k == i:
+				l[k][k] = 1
+			else:
+				sum_u = 0
+				for j in range(i):
+					sum_u += (l[k][j] * u[j][i])
+				l[k][i] = (a[k][i] - sum_u) // u[i][i]
+	print_mat(l, u, n)
+				
+def print_mat(l, u, n) :
+	print('Lower triangular matrix :')
+	for i in range(n) :
+		for j in range(n) :
+			print(str(l[i][j]), end = '\t') 
+		print('\n')
+			
+	print('Upper triangular matrix :')
+	for i in range(n) :
+		for j in range(n) :
+			print(str(u[i][j]), end = '\t') 
+		print('\n')
+	
+if __name__ == '__main__' :
+	n = int(input('Enter the order of the matrix : '))
+	print('Enter the matrix A :')
+	a = [[0 for x in range(n)] for y in range(n)]
+	for i in range(n) :
+		for j in range(n) :
+			a[i][j] = (int(input()))
+	lu(a, len(a))

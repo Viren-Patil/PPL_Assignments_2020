@@ -18,7 +18,7 @@ void* thread(void* arg)
 	if(*val == 0) {
 		while (sec < 60) {
 			sleep(1);
-			system("clear");
+			system("cls");
 			printf("\t\t\t\t\t%02d:%02d:%02d\n", hr, min, sec);
 			sec++;
 		}

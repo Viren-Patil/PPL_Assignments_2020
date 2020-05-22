@@ -168,7 +168,15 @@ class Deer(Animals):
         print("Deer is a herbivorous animal")
 
 
-
+mon = Monkey()
+# print(mon.__eyes)    This gives an error as we cannot access private variables directly.
+print(mon._Animals__eyes)  # This is one way to access the private variables.
+print(mon._living)
+print(mon.legs)
+mon.eats()
+mon.color()
+mon.sound()
+mon.typeOfAnimal()
 
 
 

@@ -1,7 +1,7 @@
 print ("Enter the page numbers between 1 to 25")
 page = 0
 count = 0
-l = []
+l = [] 
 li = range(1,26)
 while (count < 25):
 	page = int(input("Enter page number(-1 to exit): "))

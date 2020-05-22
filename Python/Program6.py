@@ -15,7 +15,7 @@ def find_sum(num):
 	return s + 1
 	
 	
-l = []
+l = [] 
 i = 2
 c = 0
 while (c != 10):

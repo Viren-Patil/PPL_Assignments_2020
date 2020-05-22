@@ -1,7 +1,6 @@
 from animals import *
 from shapes import *
 
-
 lion = Lion('20 years')
 lion.setsound('Roaring')
 lion.typeOfAnimal()

@@ -49,7 +49,7 @@ try:
     print(dic[5])
 
 except LookupError:
-    print("LookupError: Key Error occured because the key is not present in the dictionary")
+    print("LookupError: Key Error occured because the key is not present in the dictionary\n")
 
 else:
     print("No error while accesing the value of the key.")
@@ -61,7 +61,7 @@ try:
     print(l[9])
 
 except LookupError:
-    print("LookupError: Index Error occured because the index went out of bounds.")  
+    print("LookupError: Index Error occured because the index went out of bounds.\n")  
 
 else:
     print("No error while accesing the list.")

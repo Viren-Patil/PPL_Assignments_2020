@@ -1,4 +1,3 @@
-
 st = int(input("Enter the start range: "))
 end = int(input("Enter the end range: "))
 l = []
