@@ -1,4 +1,4 @@
-###PPL Assignments###
+#PPL Assignments
 
 This repository has assigments for the course of PPL 2019-2020.
 
