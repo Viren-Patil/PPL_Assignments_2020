@@ -2,13 +2,10 @@
 
 This repository has assigments for the course of PPL 2019-2020.
 
-## Name: Viren Rajesh Patil
-
-## MIS: 111803155
-
-## Class: SY Computer Engineering
-
-## Div: 2
+### Name: Viren Rajesh Patil
+### MIS: 111803155
+### Class: SY Computer Engineering
+### Div: 2
 
 [Project Repository Link](https://github.com/hrishikeshathalye/PPL-Project.git)
 
