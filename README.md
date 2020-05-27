@@ -1,4 +1,4 @@
-PPL Assignments
+###PPL Assignments###
 
 This repository has assigments for the course of PPL 2019-2020.
 
@@ -9,6 +9,8 @@ MIS: 111803155
 Class: SY Computer Engineering
 
 Div: 2
+
+[Project Repository Link](https://github.com/hrishikeshathalye/PPL-Project.git)
 
 
 NOTE(Tkinter Assignment): You will have to run the paint program on windows due to the Image and ImageGrab dependencies.
